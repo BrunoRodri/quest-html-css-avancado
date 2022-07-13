@@ -4,42 +4,33 @@
   font-size: 62.5%;
 }
 
-main {
+html {
   background: url('../images/bg-desktop.svg') center center no-repeat;
   background-color: hsl(257, 40%, 49%);
-  width: 1440px;
-  min-height: 85vh;
-  display: flex;
-  margin-top: 8rem;
-  margin-left: auto;
-  margin-right: auto;
-  flex-direction: column;
-}
-
-.page {
-  display: grid;
-  grid: 'logo .'
-        'mockup content'
-        'mockup content'
-        '. social';
-  grid-template-columns: 1fr 1fr;
-  position: relative;
+  height: 100vh;
+  background-size: cover;
 }
 
 /* LOGO */
 
-.logo{
-  grid-area: logo;
-  width: 264px;
-  height: 49px;
-  margin: 3rem;
+.logo {
+  width: 50%;
   margin-top: 5rem;
+  margin-left:16rem;
+}
+
+/* CONTAINER */
+
+.container {
+  display: flex;
+  gap: 6rem;
+  justify-content: center;
+  margin: 5rem;
 }
 
 /* MOCKUP */
 
 .mockup {
-  grid-area: mockup;
   margin: 5rem;
 }
 
@@ -47,45 +38,41 @@ main {
 
 .content {
   color: white;
-  grid-area: content;
+  margin: 0 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  position: absolute;
-  top: 60px;
 }
 
 .content .titulo {
-  max-width: 500px;
+  max-width: 600px;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
-  font-size: 4.2rem;
-  margin-bottom: 0px;
+  font-size: max(3rem , 2.8vw);
+  margin-bottom: 2rem;
+  margin-top: 0rem;
 }
 
 .content .subtitulo {
+  max-width: 750px;
   font-family: 'Open Sans', sans-serif;
-  margin-right: 6.5rem;
-  max-width: 500px;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  font-size: 1.6rem;
+  font-size: max(1.6rem, 1.3vw);
 }
 
 /* BOTÃO REGISTER */
 
 .registrar {
-  
-  display: flex;
-  max-width: 100px;
-  padding: 1rem 2.5rem;
+  width: 25%;
+  padding: 1.5rem 2.5rem;
   background-color: white;
   border-radius: 5rem;
-  justify-content: center;
   text-decoration: none;
   margin-top: 1rem;
   font-family: 'Poppins', sans-serif;
-  font-size: 1.6rem;
+  font-size: max(1.6rem, 1vw);
+  text-align: center;
+  box-shadow: 2px 2px 2px black;
+  color: hsl(257, 40%, 49%);
 }
 
 .registrar:hover {
@@ -96,19 +83,25 @@ main {
 /* SOCIAL */
 
 .social {
-  grid-area: social;
-  position: absolute;
-  right: 100px;
-  bottom: -20px;
   display: flex;
+  justify-content: flex-end;
   gap: 2rem;
+  margin-right: 10rem;
 }
 
 .social i {
-  font-size: 3.2rem;
+  padding: 1rem;
+  border: 1px solid white;
+  border-radius: 50px;
+  font-size: 2rem;
   color: white;
+}
+
+.social .fa-facebook-f {
+  padding: 1rem 1.3rem;
 }
 
 .social i:hover {
   color: hsl(300, 69%, 71%);
+  border-color: hsl(300, 69%, 71%);
 }
